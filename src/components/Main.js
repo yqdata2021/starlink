@@ -39,7 +39,7 @@ class Main extends Component {
     });
 
     axios
-      .get("http://localhost:3001/satelliteList", {
+      .get("https://starlink-backend.herokuapp.com/satelliteList", {
         params: {
           url,
         },
@@ -74,7 +74,7 @@ class Main extends Component {
       const { satid } = sat;
       const url = `/api/${SATELLITE_POSITION_URL}/${satid}/${latitude}/${longitude}/${altitude}/${endTime}/&apiKey=${SAT_API_KEY}`;
 
-      return axios.get("http://localhost:3001/positions", {
+      return axios.get("https://starlink-backend.herokuapp.com/positions", {
         params: {
           url,
         },
